@@ -1,3 +1,18 @@
+- [How to develop Picturama](#how-to-develop-picturama)
+  - [Directory structure](#directory-structure)
+  - [Build from sources](#build-from-sources)
+  - [Developing main process code](#developing-main-process-code)
+  - [Debug main process](#debug-main-process)
+  - [Unit tests](#unit-tests)
+  - [UI Tester](#ui-tester)
+  - [Add missing attributes to localization files](#add-missing-attributes-to-localization-files)
+  - [Build distributable package](#build-distributable-package)
+  - [I18N](#i18n)
+  - [Icons](#icons)
+  - [CSS naming conventions](#css-naming-conventions)
+
+
+
 How to develop Picturama
 ========================
 
@@ -43,6 +58,29 @@ Fetch dependencies and build and start Picturama:
 
     yarn
     yarn start
+
+**In Windows Terminal**, !!! `make sure` the node version is 16.20.0
+
+```
+Error in bail mode: Error: callback(): The callback was already called.
+    at context.callback (H:\myproject\github\picturama\node_modules\loader-runner\lib\LoaderRunner.js:106:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5) Error: callback(): The callback was already called.
+    at context.callback (H:\myproject\github\picturama\node_modules\loader-runner\lib\LoaderRunner.js:106:10)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+```
+
+$ MINGW64 /h/myproject/github/picturama (master)
+$ nvm use 16.20.2
+Now using node v16.20.2 (64-bit)
+
+then 
+> yarn
+>
+> yarn start
 
 If you get an error with `node-gyp rebuild` then delete `~/.node-gyp` and try again:
 
